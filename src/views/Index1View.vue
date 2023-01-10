@@ -1,7 +1,29 @@
+<script>
+import Crear from '../components/Crear.vue'
+export default {
+  components: {
+    Crear
+  },
+  data() {
+    return {
+      posts: [
+        { id: 1, title: 'My journey with Vue' },
+        { id: 2, title: 'Blogging with Vue' },
+        { id: 3, title: 'Why Vue is so fun' }
+      ],
+      postFontSize: 1
+    }
+  }
+}
+</script>
+
 <template>
-    <div>
-        <h1>
-            Tittle
-        </h1>
-    </div>
+  <div :style="{ fontSize: postFontSize + 'em' }">
+    <Crear
+      v-for="post in posts"
+      :key="post.id"
+      :title="post.title"
+      @enlarge-text="postFontSize += 0.1"
+    ></Crear>
+  </div>
 </template>

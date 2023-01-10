@@ -1,11 +1,14 @@
-<template>
-    <div>
-        lISTAR MYSQL
-    </div>
-</template>
 
+<template>
+  <div class="crear">
+	  <h4>{{ title }}</h4>
+	  <button @click="$emit('enlarge-text')">Enlarge text</button>
+  </div>
+</template>
 <script>
 export default {
-    
+  props: ['title'],
+  emits: ['enlarge-text']
 }
 </script>
+
