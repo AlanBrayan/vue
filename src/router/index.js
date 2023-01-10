@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+//
 import Crear from '../components/Crear.vue'
 import Editar from '../components/Editar.vue'
 import Listar from '../components/Listar.vue'
